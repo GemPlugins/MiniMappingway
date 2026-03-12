@@ -30,7 +30,7 @@
 
 	<ProjectExtensions>
 		<DalamudPlugin>
-			<Author>Created by JayceOfSpades, Maintained by Azure Gem</Author>
+			<Author>Azure Gem, Created by JayceOfSpades</Author>
 			<Name>Mini-Mappingway</Name>
 			<Punchline>A plugin to show your friends and FC members on the minimap.</Punchline>
 			<Description>A plugin to show your friends and FC members on the minimap. Customise the markers and toggle whether you want to see friends, FC members, or both, in the settings! IMPORTANT: If you have your minimap rotation locked, please enable 'Minimap Locked' in the settings.</Description>

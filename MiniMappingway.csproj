@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Dalamud.NET.Sdk/14.0.1">
+<Project Sdk="Dalamud.NET.Sdk/14.0.2">
   <PropertyGroup>
-    <Authors></Authors>
-    <Company></Company>
     <Description>MiniMappingway</Description>
-	<AssemblyVersion>1.0.3.2</AssemblyVersion>
-    <Copyright></Copyright>
+	<AssemblyVersion>14.745.1.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/jaycewhite/MiniMappingway</PackageProjectUrl>
   </PropertyGroup>
 
@@ -33,10 +30,11 @@
 
 	<ProjectExtensions>
 		<DalamudPlugin>
-			<Author>JayceOfSpades</Author>
+			<Author>Created by JayceOfSpades, Maintained by Azure Gem</Author>
 			<Name>Mini-Mappingway</Name>
 			<Punchline>A plugin to show your friends and FC members on the minimap.</Punchline>
 			<Description>A plugin to show your friends and FC members on the minimap. Customise the markers and toggle whether you want to see friends, FC members, or both, in the settings! IMPORTANT: If you have your minimap rotation locked, please enable 'Minimap Locked' in the settings.</Description>
+			<RepoUrl>https://github.com/GemPlugins/MiniMappingway</RepoUrl>
 			<Tags>
 				<Tag>Friend</Tag>
 				<Tag>Minimap</Tag>

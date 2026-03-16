@@ -2,7 +2,7 @@
 <Project Sdk="Dalamud.NET.Sdk/14.0.2">
   <PropertyGroup>
     <Description>MiniMappingway</Description>
-	<AssemblyVersion>14.745.1.1</AssemblyVersion>
+	<AssemblyVersion>14.745.1.2</AssemblyVersion>
     <PackageProjectUrl>https://github.com/GemPlugins/MiniMappingway</PackageProjectUrl>
   </PropertyGroup>
 

@@ -55,7 +55,7 @@ public sealed class Plugin : IDalamudPlugin
         ServiceManager.DalamudPluginInterface.UiBuilder.Draw += ServiceManager.WindowSystem.Draw;
         ServiceManager.DalamudPluginInterface.UiBuilder.OpenConfigUi += DrawConfigUi;
 
-        ServiceManager.ClientState.TerritoryChanged += TerritoryChanged;
+        ServiceManager.ClientState.MapIdChanged += MapIdChangedHandler;
 
         #endregion
     }
@@ -66,12 +66,12 @@ public sealed class Plugin : IDalamudPlugin
         ServiceManager.CommandManager.RemoveHandler(CommandNameDebug);
         ServiceManager.DalamudPluginInterface.UiBuilder.Draw -= ServiceManager.WindowSystem.Draw;
         ServiceManager.DalamudPluginInterface.UiBuilder.OpenConfigUi -= DrawConfigUi;
-        ServiceManager.ClientState.TerritoryChanged -= TerritoryChanged;
+        ServiceManager.ClientState.MapIdChanged -= MapIdChangedHandler;
         ServiceManager.Dispose();
 
     }
 
-    private void TerritoryChanged(ushort _)
+    private static void MapIdChangedHandler(uint _)
     {
         ServiceManager.NaviMapManager.UpdateMap();
 

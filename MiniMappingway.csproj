@@ -1,17 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Dalamud.NET.Sdk/14.0.2">
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
   <PropertyGroup>
     <Description>MiniMappingway</Description>
-	<AssemblyVersion>14.745.1.2</AssemblyVersion>
+	<AssemblyVersion>15.750.0.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/GemPlugins/MiniMappingway</PackageProjectUrl>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="10.0.1" />
-    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="9.0.0" />
-    <PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.0" />
-    <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

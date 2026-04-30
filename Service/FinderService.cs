@@ -1,4 +1,4 @@
-﻿using Dalamud.Game.ClientState.Objects.Enums;
+using Dalamud.Game.ClientState.Objects.Enums;
 using Dalamud.Plugin.Services;
 using Dalamud.Utility;
 using FFXIVClientStructs;
@@ -63,7 +63,7 @@ public sealed class FinderService : IDisposable
                 continue;
             }
 
-            if (obj.ObjectKind is not ObjectKind.Player)
+            if (obj.ObjectKind is not ObjectKind.Pc)
             {
                 ServiceManager.NaviMapManager.RemoveFromBag(person.Id, dict.Key);
                 continue;
@@ -110,7 +110,7 @@ public sealed class FinderService : IDisposable
         if (obj is null) return;
 
         var ptr = (Character*)obj.Address;
-        if (obj.ObjectKind is not ObjectKind.Player) return;
+        if (obj.ObjectKind is not ObjectKind.Pc) return;
         if (ptr->IsAllianceMember || ptr->IsPartyMember) return;
 
         var personDict = ServiceManager.NaviMapManager.PersonDict;

@@ -1,4 +1,4 @@
-﻿using Dalamud.Game.ClientState.Objects.Enums;
+using Dalamud.Game.ClientState.Objects.Enums;
 using Dalamud.Bindings.ImGui;
 using MiniMappingway.Manager;
 using MiniMappingway.Model;
@@ -28,7 +28,7 @@ internal static class MarkerUtility
     private static unsafe CircleData? CalculateCirclePosition(this KeyValuePair<int, PersonDetails> person)
     {
         var personObj = ServiceManager.ObjectTable[person.Value.Index];
-        if (personObj?.IsValid() is not true || personObj.ObjectKind is not ObjectKind.Player)
+        if (personObj?.IsValid() is not true || personObj.ObjectKind is not ObjectKind.Pc)
         {
             ServiceManager.NaviMapManager.RemoveFromBag(person.Value.Id, person.Value.SourceName);
             return null;

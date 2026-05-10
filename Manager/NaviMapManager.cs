@@ -148,7 +148,7 @@ public unsafe class NaviMapManager : IDisposable
         X = NaviMapPointer->X;
         Y = NaviMapPointer->Y;
         NaviScale = NaviMapPointer->Scale;
-        Visible = (NaviMapPointer->IsVisible && NaviMapPointer->VisibilityFlags == 0);
+        Visible = NaviMapPointer->IsVisible && NaviMapPointer->VisibilityFlags == 0 && !ServiceManager.GameGui.GameUiHidden;
 
         return true;
     }

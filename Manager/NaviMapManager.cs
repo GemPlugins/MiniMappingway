@@ -1,4 +1,4 @@
-﻿using FFXIVClientStructs.FFXIV.Client.UI.Agent;
+using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using Dalamud.Bindings.ImGui;
 using Lumina.Excel;
@@ -149,6 +149,14 @@ public unsafe class NaviMapManager : IDisposable
         Y = NaviMapPointer->Y;
         NaviScale = NaviMapPointer->Scale;
         Visible = NaviMapPointer->IsVisible && NaviMapPointer->VisibilityFlags == 0 && !ServiceManager.GameGui.GameUiHidden;
+
+        // Multi-monitor support
+        var viewport = ImGui.GetWindowViewport();
+        if (!viewport.IsNull)
+        {
+            X += (int)viewport.Pos.X;
+            Y += (int)viewport.Pos.Y;
+        }
 
         return true;
     }

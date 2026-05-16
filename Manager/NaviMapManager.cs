@@ -154,8 +154,8 @@ public unsafe class NaviMapManager : IDisposable
         var viewport = ImGui.GetWindowViewport();
         if (!viewport.IsNull)
         {
-            X += (int)viewport.Pos.X;
-            Y += (int)viewport.Pos.Y;
+            X -= (int)viewport.Pos.X;
+            Y -= (int)viewport.Pos.Y;
         }
 
         return true;
